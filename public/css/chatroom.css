@@ -1,0 +1,55 @@
+body {
+    font: 13px Helvetica, Arial;
+    background: #111;
+}
+
+.msgContainer {
+    width: 100%;
+    position: fixed;
+    bottom: 0px;
+    background: #111;
+    display: flex;
+}
+
+.msgInput {
+    flex: 1;
+    margin: 5px 5px;
+    height: 30px;
+    background: transparent;
+    border: 1px #fff solid;
+    color: #fff;
+}
+
+.msgSubmitBtn {
+    width: 200px;
+    height: 32px;
+    padding: 5px 6px;
+    margin: 5px 5px;
+    background: transparent;
+    border: 1px #fff solid;
+    color: #fff;
+}
+
+.msgSubmitBtn:active {
+    background: #aaa;
+}
+
+.msgBox {
+    position: absolute;
+    top: 50px;
+    bottom: 5%;
+    width: 100%;
+    margin-bottom: 10px;
+    padding: 0;
+    list-style-type: none;
+    overflow: auto;
+}
+
+.msgBox li {
+    padding: 5px 10px;
+    color: #fff;
+}
+
+.msgBox li .name {
+    font-weight: bold;
+}

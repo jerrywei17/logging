@@ -1,0 +1,33 @@
+.public-header
+	.public-container.clearfloat
+		.header-logo
+			a(href="#") XX聊天室
+		ul.header-nav
+			if user
+				li.item
+					span 歡迎您，#{user.name}
+					input#username(type="hidden" value=user.name)
+				li.item
+					a(href="/logout") 登出
+			else
+				li.item
+					a(href="#" id="signupBtn") 註冊
+				li.item
+					a(href="#" id="signinBtn") 登錄
+.mask(id="mask")
+#signModal.modal.fade
+	.modal-dialog
+		.modal-content
+			form#signForm(method="POST" action="")
+				.modal-header
+					h2(id="modal-title" class="modal-title")
+					.close(id="signClose")
+				.modal-body
+					.form-group
+						label(for="signName") 帳號：
+						input#signName.modal-input(name="name" type="text")
+					.form-group
+						label(for="signPassword") 密碼：
+						input#signPassword.modal-input(name="password" type="password")
+				.modal-footer
+					button#submitBtn.btn(type="submit" disabled) 提交

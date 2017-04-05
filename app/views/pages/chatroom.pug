@@ -1,0 +1,18 @@
+doctype
+html
+	head
+		meta(charset="utf-8")
+		title #{title}
+		link(href="/css/reset.css", rel="stylesheet")
+		link(href="/css/common.css", rel="stylesheet")
+		link(href="/css/chatroom.css", rel="stylesheet")
+		script(src="/socket.io/socket.io.js")
+		script(src="/libs/jquery/dist/jquery.min.js")
+		script(src="/js/chat.js")
+	body
+		include ../includes/header.pug
+		.msgBox(id="msgBox")
+			ul(id="messages")
+			.msgContainer
+				input(id="msgInput" class="msgInput" autocomplete="off")
+				button(id="msgSubmitBtn" class="msgSubmitBtn" ) 送出	
