@@ -1,18 +1,6 @@
 "use strict";
 $(document).ready(function() {
     var signState;
-    var signupModal = new Custombox.modal({
-        content: {
-            effect: 'fadein',
-            target: '#signupModal'
-        }
-    });
-    var signinModal = new Custombox.modal({
-        content: {
-            effect: 'fadein',
-            target: '#signinModal'
-        }
-    });
 
     function validateName(ele, isExist) {
         /*
